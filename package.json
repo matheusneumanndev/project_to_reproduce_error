@@ -1,0 +1,49 @@
+{
+  "name": "automacao-de-testes-mobile-eg",
+  "license": "MIT",
+  "scripts": {
+    "report:allure": "npx allure",
+    "report:generate-mac": "cp ./categories.json ./test-report/allure-result;yarn report:allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
+    "report:generate-windows": "copy categories.json test-report\\allure-result & yarn report:allure generate --clean test-report\\allure-result -o test-report\\allure-report",
+    "copy-categories": "copy ./categories.json ./test-report/allure-result",
+    "report:generate": "cp ./categories.json ./test-report/allure-result;yarn report:allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
+    "report:open": "yarn report:allure open test-report/allure-report",
+    "taskkill": "taskkill /f /im node.exe",
+    "android.app": "./node_modules/.bin/wdio ./config/wdio.android.app.conf.js --cucumberOpts.tagExpression",
+    "ios.app": "./node_modules/.bin/wdio ./config/wdio.ios.app.conf.js  --cucumberOpts.tagExpression"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Infoglobo/valor-pro-mobile-test"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/register": "^7.18.9",
+    "@cucumber/cucumber": "^8.5.3",
+    "@wdio/appium-service": "^7.24.0",
+    "@wdio/cli": "^7.24.0",
+    "@wdio/codemod": "^0.12.0",
+    "@wdio/cucumber-framework": "^7.24.0",
+    "@wdio/local-runner": "^7.24.0",
+    "@wdio/spec-reporter": "^7.24.0",
+    "add": "^2.0.6",
+    "allure-commandline": "^2.18.1",
+    "appium": "^1.22.3",
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
+    "eslint": "8.22.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^3.0.9",
+    "jscodeshift": "^0.13.1",
+    "nconf": "^0.10.0",
+    "prettier": "^2.7.1",
+    "wdio-video-reporter": "^3.3.0",
+    "webdriverio": "^7.24.0",
+    "ws": "^8.9.0",
+    "yarn": "^1.22.19"
+  }
+}

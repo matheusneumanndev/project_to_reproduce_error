@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Sucesso",
+    "matchedStatuses": ["passed"]
+  },
+  {
+    "name": "Falha",
+    "matchedStatuses": ["broken", "failed"]
+  },
+  {
+    "name": "Não testados",
+    "matchedStatuses": ["skipped"]
+  },
+  {
+    "name": "Status Desconhecido",
+    "matchedStatuses": ["unknown"]
+  }
+]
